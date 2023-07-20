@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "UserService.Host.Protos";
+
+package report;
+
+service ReportAdder {
+	rpc AddReport (AddReportRequest) returns (AddReportReply);
+}
+
+message AddReportRequest {
+	int32 userId = 1;
+	int32 reportId = 2;
+}
+
+message AddReportReply {
+	string user = 1;
+}
